@@ -5,6 +5,7 @@
 package vista;
 
 import controlador.AutoControl;
+import java.util.Iterator;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import modelo.Auto;
@@ -127,16 +128,21 @@ public class AutoVista extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this, e1.getMessage());
             this.jTextField1.setText("");
         }
-            this.autoControl.listar().forEach(System.out::println);
-        String[] encabezado = {"Marca","Modelo"};
+        this.autoControl.listar().forEach(System.out::println);
+        String[] encabezado = {"Marca","Placa"};
         Object[][] objData = new Object[this.autoControl.listar().size()][2];
         int i=0;
-        for(Auto a: this.autoControl.listar())
-        {
+        for (modelo.Auto a : this.autoControl.listar()) {
             objData[i][0]=a.getMarca();
             objData[i][1]=a.getPlaca();
             i++;
         }
+        
+        this.autoControl.listar().stream().filter(auto -> (auto.getMarca().contains("x"))).forEachOrdered(auto -> {
+            System.out.println(auto.getMarca());
+        });
+        
+        
         this.tabelModel = new DefaultTableModel(objData,encabezado);
         this.jTable1.setModel(this.tabelModel);
     }//GEN-LAST:event_jButton1ActionPerformed
