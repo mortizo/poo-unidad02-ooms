@@ -5,6 +5,7 @@
 package vista;
 
 import controlador.AutoControl;
+import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import modelo.Auto;
 
@@ -119,8 +120,14 @@ public class AutoVista extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        this.autoControl.crear(this.jTextField1.getText(), this.jComboBox1.getSelectedItem().toString());
-        this.autoControl.listar().forEach(System.out::println);
+        try{
+            this.autoControl.crear(this.jTextField1.getText(), this.jComboBox1.getSelectedItem().toString());
+        }catch(Exception e1)
+        {
+            JOptionPane.showMessageDialog(this, e1.getMessage());
+            this.jTextField1.setText("");
+        }
+            this.autoControl.listar().forEach(System.out::println);
         String[] encabezado = {"Marca","Modelo"};
         Object[][] objData = new Object[this.autoControl.listar().size()][2];
         int i=0;

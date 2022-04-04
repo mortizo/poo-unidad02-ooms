@@ -8,6 +8,8 @@ package controlador;
 import java.util.ArrayList;
 import java.util.List;
 import modelo.Auto;
+import servicio.AutoServicio;
+import vista.AutoVista;
 
 /**
  *
@@ -15,16 +17,40 @@ import modelo.Auto;
  */
 public class AutoControl {
     
-    private final List<Auto> autoList = new ArrayList<>();
-
+    private AutoServicio autoServicio = new AutoServicio();    
+    
     public Auto crear(String placa, String marca){
-        var auto = new Auto(placa, marca);
-        this.autoList.add(auto);
-        return auto;
+        if(validaFormatoPlaca(placa)){
+            var auto = new Auto(placa, marca);
+            this.autoServicio.crear(placa, marca);
+            return auto;
+        }
+        throw new IllegalArgumentException("El formato de la placa es incorrecto");
     }
     
+    public boolean validaFormatoPlaca(String placa){
+        var retorno = false;
+        var letras = placa.substring(0, 3);
+        var numeros = placa.substring(3,6);
+        retorno=(contieneSoloNumeros(numeros)&&(contieneSoloLetras(letras)));
+        return retorno;
+    }
+    
+    private static boolean contieneSoloNumeros(String cadena) {
+        return cadena.matches("[+-]?\\d*(\\.\\d+)?");
+    }
+    
+    private static boolean contieneSoloLetras(String cadena) {
+        var retorno=true;
+        for (char c: cadena.toCharArray ()){
+            if (!((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z') || c == ' '))
+                retorno=false;
+        }
+        return retorno;
+    }
+        
     public List<Auto> listar(){   
-        return this.autoList;
+        return this.autoServicio.listar();
     }
     
     
