@@ -25,7 +25,5 @@ public class AutoServicio extends AbstractService<Auto>{
     public List<Auto> listar(){   
         return this.autoList;
     }
-
     
-
 }

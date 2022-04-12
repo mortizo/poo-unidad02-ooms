@@ -4,15 +4,18 @@
  */
 package servicio;
 
+import java.util.ArrayList;
 import java.util.List;
+import modelo.Auto;
 
 /**
  *
  * @author morti
  */
 public abstract class AbstractService<T> {
-   
+    
     public abstract T crear(T objeto);
     public abstract List<T> listar();
+    
     
 }
