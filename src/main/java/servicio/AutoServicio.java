@@ -12,13 +12,12 @@ import modelo.Auto;
  *
  * @author morti
  */
-public class AutoServicio {
+public class AutoServicio extends AbstractService<Auto>{
     
     private final List<Auto> autoList = new ArrayList<>();
      
 
-    public Auto crear(String placa, String marca){
-        var auto = new Auto(placa, marca);
+    public Auto crear(Auto auto){
         this.autoList.add(auto);
         return auto;
     }
@@ -26,5 +25,7 @@ public class AutoServicio {
     public List<Auto> listar(){   
         return this.autoList;
     }
+
     
+
 }

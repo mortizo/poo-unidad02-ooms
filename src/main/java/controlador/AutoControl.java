@@ -22,7 +22,7 @@ public class AutoControl {
     public Auto crear(String placa, String marca){
         if(validaFormatoPlaca(placa)){
             var auto = new Auto(placa, marca);
-            this.autoServicio.crear(placa, marca);
+            this.autoServicio.crear(auto);
             return auto;
         }
         throw new IllegalArgumentException("El formato de la placa es incorrecto");
