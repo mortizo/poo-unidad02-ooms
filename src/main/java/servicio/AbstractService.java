@@ -17,5 +17,5 @@ public abstract class AbstractService<T> {
     public abstract T crear(T objeto);
     public abstract List<T> listar();
     
-    
+     
 }
