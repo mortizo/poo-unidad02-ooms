@@ -12,7 +12,7 @@ import modelo.Auto;
  *
  * @author morti
  */
-public class AutoServicio extends AbstractService<Auto>{
+public class AutoServicio implements IAutoServicio{
     
     private final List<Auto> autoList = new ArrayList<>();
      
