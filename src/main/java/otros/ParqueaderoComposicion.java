@@ -10,13 +10,13 @@ import java.util.ArrayList;
  *
  * @author morti
  */
-public class Parqueadero {
+public class ParqueaderoComposicion {
     
     private String nombre;
     private String direccion;
     private ArrayList<Auto> autoList;
 
-    public Parqueadero(String nombre, String direccion) {
+    public ParqueaderoComposicion(String nombre, String direccion) {
         this.nombre = nombre;
         this.direccion = direccion;
         this.autoList = new ArrayList<>();
@@ -28,3 +28,5 @@ public class Parqueadero {
     }
        
 }
+
+

@@ -7,10 +7,6 @@ package servicio;
 import java.util.List;
 import modelo.Auto;
 
-/**
- *
- * @author morti
- */
 public interface IAutoServicio {
     
     public Auto crear(Auto auto);

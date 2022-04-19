@@ -24,6 +24,6 @@ public class AutoServicio implements IAutoServicio{
     
     public List<Auto> listar(){   
         return this.autoList;
-    }
+    }   
     
 }
