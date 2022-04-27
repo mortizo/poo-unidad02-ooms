@@ -14,7 +14,7 @@ public class Universidad {
     private String rector;
     private int numeroEstudiantes;
     private int numeroCarreras;
-    private String [] carreraList;
+    private Carrera [] carreraList;
 
     public Universidad(String nombre) {
         this.nombre = nombre;
@@ -25,7 +25,8 @@ public class Universidad {
         this.rector = rector;
     }
 
-    public Universidad(String nombre, String rector, int numeroEstudiantes, int numeroCarreras) {
+    public Universidad(String nombre, String rector, int numeroEstudiantes, 
+            int numeroCarreras) {
         this.nombre = nombre;
         this.rector = rector;
         this.numeroEstudiantes = numeroEstudiantes;
@@ -33,7 +34,8 @@ public class Universidad {
     }
     
     
-    public Universidad(String nombre, String rector, int numeroEstudiantes, int numeroCarreras, String[] carreraList) {
+    public Universidad(String nombre, String rector, int numeroEstudiantes, 
+            int numeroCarreras, Carrera[] carreraList) {
         this.nombre = nombre;
         this.numeroEstudiantes = numeroEstudiantes;
         this.numeroCarreras = numeroCarreras;
@@ -75,18 +77,19 @@ public class Universidad {
         this.rector = rector;
     }
 
-    public String[] getCarreraList() {
+    public Carrera[] getCarreraList() {
         return carreraList;
     }
 
-    public void setCarreraList(String[] carreraList) {
+    public void setCarreraList(Carrera[] carreraList) {
         this.carreraList = carreraList;
     }
 
     @Override
     public String toString() {
         String retorno= "La Universidad se llama: "+this.nombre+"\n"+
-                "Su rector es: "+this.rector+ " y tiene: "+this.numeroCarreras+
+                "Su rector es: "+this.rector+" tiene "+this.numeroEstudiantes+
+                " estudiantes y cuenta con : "+this.numeroCarreras+
                 " carreras ";        
         return retorno;
     }

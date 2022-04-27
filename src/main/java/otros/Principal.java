@@ -34,18 +34,17 @@ public class Principal {
             System.out.println(numeroDecimalList[i]);
         }
         
-        var carreraList = new String[4];
-        carreraList[0]="Computación";
-        carreraList[1]="Electrónica";
-        carreraList[2]="Mecánica";
-        carreraList[3]="Telecomunicaciones";
-        
-        
+        var carreraList = new Carrera[4];
+        carreraList[0]=new Carrera("Computación","Vladimir");
+        carreraList[1]=new Carrera("Electrónica","Eduardo");
+        carreraList[2]=new Carrera("Telecomunicaciones","Eduardo");
+        carreraList[3]=new Carrera("Economía","Luis");
         Universidad ups= new Universidad("Universidad Politécnica Salesiana", 
                 "Juan Cárdenas",23000,4,carreraList);
+        
         System.out.println(ups.toString());
         for(int i=0;i<carreraList.length;i++){
-            System.out.println(carreraList[i]);
+            System.out.println(carreraList[i].toString());
         }
        
         Universidad upm= new Universidad("Universidad Politécnica de Madrid");
