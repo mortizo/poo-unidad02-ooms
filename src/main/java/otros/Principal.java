@@ -20,5 +20,40 @@ public class Principal {
         System.out.println("Los autos que competirán son");
         for(var auto:competenciaList)
             System.out.println(auto.toString());
+        
+        var numeroDecimalList = new double[7];
+        numeroDecimalList[0]=45.8;
+        numeroDecimalList[1]=45.8;
+        numeroDecimalList[2]=44.8;
+        numeroDecimalList[3]=5.8;
+        numeroDecimalList[4]=457.8;
+        numeroDecimalList[5]=35.8;
+        numeroDecimalList[6]=25.8;
+        
+        for(int i=0;i<numeroDecimalList.length;i++){
+            System.out.println(numeroDecimalList[i]);
+        }
+        
+        var carreraList = new String[4];
+        carreraList[0]="Computación";
+        carreraList[1]="Electrónica";
+        carreraList[2]="Mecánica";
+        carreraList[3]="Telecomunicaciones";
+        
+        
+        Universidad ups= new Universidad("Universidad Politécnica Salesiana", 
+                "Juan Cárdenas",23000,4,carreraList);
+        System.out.println(ups.toString());
+        for(int i=0;i<carreraList.length;i++){
+            System.out.println(carreraList[i]);
+        }
+       
+        Universidad upm= new Universidad("Universidad Politécnica de Madrid");
+        Universidad upv= new Universidad("Universidad Politécnica de Valencia");
+        
+        
+        
+        
+        
     }
 }
