@@ -12,7 +12,7 @@ public class PrincipalComposicion {
     
     public static void main(String [] args){
         Revista r = new Revista("Vistazo", "AblaYala","456654IASPEODK");
-        r.crear("El agua es vida", 2785, "Si es vida........");
+        r.crear("El agua es vida", 2785, "Si es vida........",0);
         
         System.out.println(r);
     }
