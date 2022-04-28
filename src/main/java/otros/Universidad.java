@@ -14,7 +14,7 @@ public class Universidad {
     private String rector;
     private int numeroEstudiantes;
     private int numeroCarreras;
-    private Carrera [] carreraList;
+    private util.Carrera [] carreraList;
 
     public Universidad(String nombre) {
         this.nombre = nombre;
@@ -35,7 +35,7 @@ public class Universidad {
     
     
     public Universidad(String nombre, String rector, int numeroEstudiantes, 
-            int numeroCarreras, Carrera[] carreraList) {
+            int numeroCarreras, util.Carrera[] carreraList) {
         this.nombre = nombre;
         this.numeroEstudiantes = numeroEstudiantes;
         this.numeroCarreras = numeroCarreras;
@@ -77,11 +77,11 @@ public class Universidad {
         this.rector = rector;
     }
 
-    public Carrera[] getCarreraList() {
+    public util.Carrera[] getCarreraList() {
         return carreraList;
     }
 
-    public void setCarreraList(Carrera[] carreraList) {
+    public void setCarreraList(util.Carrera[] carreraList) {
         this.carreraList = carreraList;
     }
 
@@ -90,7 +90,10 @@ public class Universidad {
         String retorno= "La Universidad se llama: "+this.nombre+"\n"+
                 "Su rector es: "+this.rector+" tiene "+this.numeroEstudiantes+
                 " estudiantes y cuenta con : "+this.numeroCarreras+
-                " carreras ";        
+                " carreras ";     
+                for(util.Carrera c:this.carreraList){
+                    retorno=retorno+"\n"+c.toString();
+                }
         return retorno;
     }
 

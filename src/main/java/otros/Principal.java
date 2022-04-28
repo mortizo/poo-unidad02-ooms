@@ -4,6 +4,8 @@
  */
 package otros;
 
+import util.Carrera;
+
 /**
  *
  * @author morti
@@ -34,6 +36,9 @@ public class Principal {
             System.out.println(numeroDecimalList[i]);
         }
         
+        Universidad upm= new Universidad("Universidad Politécnica de Madrid");
+        Universidad upv= new Universidad("Universidad Politécnica de Valencia");
+        
         var carreraList = new Carrera[4];
         carreraList[0]=new Carrera("Computación","Vladimir");
         carreraList[1]=new Carrera("Electrónica","Eduardo");
@@ -41,14 +46,10 @@ public class Principal {
         carreraList[3]=new Carrera("Economía","Luis");
         Universidad ups= new Universidad("Universidad Politécnica Salesiana", 
                 "Juan Cárdenas",23000,4,carreraList);
-        
-        System.out.println(ups.toString());
-        for(int i=0;i<carreraList.length;i++){
-            System.out.println(carreraList[i].toString());
-        }
        
-        Universidad upm= new Universidad("Universidad Politécnica de Madrid");
-        Universidad upv= new Universidad("Universidad Politécnica de Valencia");
+        System.out.println(ups.toString());
+        
+        
         
         
         
