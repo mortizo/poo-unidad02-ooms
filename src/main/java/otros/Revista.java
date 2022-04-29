@@ -16,14 +16,14 @@ public class Revista {
 
     public Revista(String nombre) {
         this.nombre = nombre;
-        this.articuloList = new Articulo[10];
+        this.articuloList = new Articulo[3];
     }
 
     public Revista(String nombre, String editor, String isbn) {
         this.nombre = nombre;
         this.editor = editor;
         this.isbn = isbn;
-        this.articuloList = new Articulo[10];
+        this.articuloList = new Articulo[3];
     }
 
     public String getNombre() {
@@ -62,10 +62,9 @@ public class Revista {
     public String toString() {
         var retorno= "Revista{" + "nombre=" + nombre + ", editor=" + editor +
                 ", isbn=" + isbn + '}';
-
-        retorno= retorno+"\n"+this.articuloList[0].toString();
-        
-        
+        for (Articulo a:this.articuloList)
+            retorno= retorno+"\n"+a.toString();
+                
         return retorno;
     }
     
