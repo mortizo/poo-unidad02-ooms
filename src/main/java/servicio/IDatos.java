@@ -4,15 +4,13 @@
  */
 package servicio;
 
-import java.util.List;
-import modelo.Auto;
-
-public interface IAutoServicio {
+/**
+ *
+ * @author morti
+ */
+public interface IDatos {
     
-    public Auto crear(Auto auto);
-    public List<Auto> listar();
-    public Auto obtenerAuto(int i);
+    public String obtenerInformacion();
+    public String autor();
     
 }
-
-

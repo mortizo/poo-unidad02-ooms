@@ -5,14 +5,16 @@
 package servicio;
 
 import java.util.List;
-import modelo.Auto;
+import modelo.Computadora;
 
-public interface IAutoServicio {
+/**
+ *
+ * @author morti
+ */
+public interface IComputadoraServicio {
     
-    public Auto crear(Auto auto);
-    public List<Auto> listar();
-    public Auto obtenerAuto(int i);
+    public Computadora crear(Computadora e);
+    public List<Computadora> listar();
+    public Computadora obtener(int i);
     
 }
-
-

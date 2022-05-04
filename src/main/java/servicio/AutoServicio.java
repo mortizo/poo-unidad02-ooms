@@ -25,5 +25,10 @@ public class AutoServicio implements IAutoServicio{
     public List<Auto> listar(){   
         return this.autoList;
     }   
+
+    @Override
+    public Auto obtenerAuto(int i) {
+        return this.autoList.get(i);
+    }
     
 }

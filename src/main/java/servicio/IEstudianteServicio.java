@@ -6,13 +6,16 @@ package servicio;
 
 import java.util.List;
 import modelo.Auto;
+import modelo.Estudiante;
 
-public interface IAutoServicio {
+/**
+ *
+ * @author morti
+ */
+public interface IEstudianteServicio {
     
-    public Auto crear(Auto auto);
-    public List<Auto> listar();
-    public Auto obtenerAuto(int i);
+    public Estudiante crear(Estudiante e);
+    public List<Estudiante> listar();
+    public Estudiante obtener(int i);
     
 }
-
-
