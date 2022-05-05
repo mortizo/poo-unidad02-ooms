@@ -24,14 +24,15 @@ public class BarcoServicio implements IBarcoServicio{
 
     @Override
     public Barco modificar(int c, Barco b) {
-        this.barcoList.add(this.buscarPosicion(c), b);
+        this.barcoList.set(this.buscarPosicion(c), b);
         return b;
     }
 
     @Override
     public Barco eliminar(int c) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-       
+        var barco=this.barcoList.get(this.buscarPosicion(c));
+        this.barcoList.remove(this.buscarPosicion(c));
+        return barco;
     }
 
     @Override

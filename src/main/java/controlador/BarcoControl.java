@@ -24,6 +24,16 @@ public class BarcoControl {
         return barco;
     }
     
+    public Barco eliminar(int c) {
+        return this.barcoServicio.eliminar(c);
+    }
+    
+    public Barco modificar(int c, Barco b) {
+        return this.barcoServicio.modificar(c,b);
+    }
+    
+    
+    
     public List<Barco> listar()
     {
         return this.barcoServicio.listar();
