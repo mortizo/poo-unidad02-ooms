@@ -86,7 +86,7 @@ public class Barco {
     public String toString() {
         return "Barco{" + "codigo=" + codigo + ", nombre=" + nombre + ", "
                 + "pais=" + pais + ", placa=" + placa 
-                + "\n"+", Datos del Capitan=" + unCapitan + '}';
+                + "\n"+"Datos del Capitan=" + unCapitan + '}';
     }
     
 }

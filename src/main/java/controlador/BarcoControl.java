@@ -32,8 +32,6 @@ public class BarcoControl {
         return this.barcoServicio.modificar(c,b);
     }
     
-    
-    
     public List<Barco> listar()
     {
         return this.barcoServicio.listar();
