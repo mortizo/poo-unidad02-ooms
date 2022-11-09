@@ -6,7 +6,7 @@ package p61.unidad02_01;
 
 /**
  *
- * @author morti
+ * @author Mauricio Ortiz Ochoa
  */
 public class Telefono {
     

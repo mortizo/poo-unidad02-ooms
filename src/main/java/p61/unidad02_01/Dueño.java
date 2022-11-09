@@ -61,9 +61,19 @@ public class Dueño {
 
     @Override
     public String toString() {
-        return "Due\u00f1o{" + "cedula=" + cedula + ", nombre=" + nombre 
-                + ", cantidadTelefonos=" + cantidadTelefonos 
-                + ", telefonoList=" + telefonoList[0].toString() + '}';
+        var retorno="Dueño{" + "cedula=" + cedula + ", nombre=" + nombre 
+                + ", cantidadTelefonos=" + cantidadTelefonos+"\n";
+        /*
+        for(var i=0;i<this.cantidadTelefonos;i++){
+            retorno+=this.telefonoList[i].toString()+"\n";
+        }
+        */
+        
+        for(var telefono: this.telefonoList){
+            retorno+=telefono.toString()+"\n";
+        }
+
+        return retorno;
     }
 
     
