@@ -19,7 +19,7 @@ public class Dueño {
     public Dueño(String cedula, String nombre) {
         this.cedula = cedula;
         this.nombre = nombre;
-        this.telefonoList = new ArrayList<Telefono>();
+        this.telefonoList = new ArrayList<>();
     }
     
     public void nuevoTelefono(String n, int e, String tT, String op){
