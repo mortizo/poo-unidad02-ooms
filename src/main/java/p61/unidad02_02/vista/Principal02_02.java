@@ -4,9 +4,13 @@
  */
 package p61.unidad02_02.vista;
 
+import java.time.LocalDate;
+import java.time.Month;
 import p61.unidad02_02.modelo.Carrera;
 import p61.unidad02_02.modelo.Dueño;
 import p61.unidad02_02.modelo.Estudiante;
+import p61.unidad02_02.modelo.Jugador;
+import p61.unidad02_02.servicio.JugadorServicio;
 
 /**
  *
@@ -20,7 +24,7 @@ public class Principal02_02 {
         juana.nuevoTelefono("072818314", 0, "Casa", "Etapa");
         juana.nuevoTelefono("0984357604", 0, "Móvil de mi esposo", "Movistar");
         
-        System.out.println("juana = " + juana.toString());*/
+        System.out.println("juana = " + juana.toString());
         
        var pedro= new Estudiante("0103667752", "Pedro");
        var luis= new Estudiante("0103667723", "Luis Antonio");
@@ -43,7 +47,26 @@ public class Principal02_02 {
         System.out.println("teleco = " + teleco.toString());
         System.out.println("elec = " + elec.toString());
         System.out.println("com = " + com.toString());
-
+*/
+       
+       var enner = new Jugador("Enner Valencia",80,175,LocalDate.of(1998, 02, 01));
+       var byron = new Jugador("Byron Castillo",80,175,LocalDate.of(1998, 02, 01));
+       var dominguez = new Jugador("Dida Dominguez",80,175,LocalDate.of(1998, 02, 01));
+       var galindez = new Jugador("Hernán Galindez",80,175,LocalDate.of(1998, 02, 01));
+       
+       
+       var baseDatosJugadores = new JugadorServicio();
+       baseDatosJugadores.crear(enner);
+       baseDatosJugadores.crear(byron);
+       baseDatosJugadores.crear(dominguez);
+       baseDatosJugadores.crear(galindez);
+       System.out.println(baseDatosJugadores.listar());
+       baseDatosJugadores.eliminarPorPosicion(1);
+       System.out.println(baseDatosJugadores.listar());
+        
+       
+       
+       
         
         
     }
