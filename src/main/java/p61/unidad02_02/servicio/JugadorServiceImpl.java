@@ -12,11 +12,11 @@ import p61.unidad02_02.modelo.Jugador;
  *
  * @author morti
  */
-public class JugadorServicioImpl implements JugadorService {
+public class JugadorServiceImpl implements JugadorService {
     
     private List<Jugador> jugadorList;
 
-    public JugadorServicioImpl() {
+    public JugadorServiceImpl() {
         this.jugadorList= new ArrayList<>();
     }
 

@@ -9,7 +9,7 @@ import p61.unidad02_02.modelo.Jugador;
 
 /**
  *
- * @author morti
+ * @author Mauricio Ortiz Ochoa
  */
 public interface JugadorService {
 
